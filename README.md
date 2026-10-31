@@ -6,9 +6,9 @@
 
 | 서비스 | 입력 정보 | 처리 방식 |
 | --- | --- | --- |
-| SharedNAI | 사이트 아이디·비밀번호 | 사이트 로그인 후 계정에 등록된 키 사용 |
-| Sakura NAI | 사이트에서 받은 키 | relay.tenshimomone.com 연결 |
-| 다른 NovelAI 호환 서버 | API 기본 주소·키 | NovelAI 호환 요청 전달 |
+| Shared- | 사이트 아이디·비밀번호 | 사이트 로그인 후 계정에 등록된 키 사용 |
+| Sakura- | 사이트에서 받은 키 | relay.tenshimomone.com 연결 |
+| 다른 NovelAI 호환 서버 | API 기본 주소·키 | 호환 요청 전달 |
 
 모든 웹사이트의 API가 자동 지원되는 것은 아닙니다. 자체 로그인·생성 규격을 쓰는 새로운 사이트는 통합 플러그인에 해당 규격을 추가해야 합니다. 일반 NovelAI 호환 서버는 화면에서 주소와 키만 추가하면 됩니다.
 
@@ -94,8 +94,6 @@ Node.js 20 이상이 필요합니다. 추가 npm 패키지는 필요하지 않�
 2026-11-01 기준 서비스별 인증·전환, 서버 재시작 후 복원, 사용자 격리, 키 노출 방지, 생성 중 서비스 변경, 1MB 초과 SharedNAI 이미지, Vibe 정규화, AutoPic 전달, 네트워크 주소 검사를 자동 테스트했습니다. 로컬 브라우저에서 320/390/768/1366px 화면의 연결 추가·전환·삭제·복원을 확인했습니다. 실제 HTTPS 연결은 두 기본 서비스의 인증 없는 조회가 401을 반환하는 것으로 확인했습니다.
 
 실제 사용자 계정 로그인이나 유료 이미지 생성은 수행하지 않았습니다. 설치 후 인증 확인 → 이미지 한 장 생성 순서로 확인하세요.
-
-테스트 실행: `server` 폴더에서 `node --test test/*.test.mjs`
 
 참조: https://sharednai5.pro/ · https://nai.tenshimomone.com/ · https://github.com/SillyGgu/AutoPic · https://github.com/SillyTavern/SillyTavern
 
