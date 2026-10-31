@@ -1,0 +1,23 @@
+<div class="inline-drawer skb-panel">
+ <div class="inline-drawer-toggle inline-drawer-header"><b>NAI 통합 연결</b><div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div></div>
+ <div class="inline-drawer-content skb-content">
+  <label class="checkbox_label"><input id="hub-enabled" type="checkbox"><span>이 확장으로 이미지 생성 연결</span></label>
+  <p id="hub-active" class="skb-note">현재 연결 없음</p>
+  <label for="hub-saved">등록된 연결</label><select id="hub-saved" class="text_pole"></select>
+  <div class="skb-actions"><button id="hub-select" class="menu_button" type="button">연결 전환</button><button id="hub-check" class="menu_button" type="button">인증 확인</button><button id="hub-disconnect" class="menu_button" type="button">현재 연결 해제·삭제</button></div>
+  <label class="checkbox_label"><input id="hub-persist-active" type="checkbox"><span>현재 연결 저장 · 재시작 후 유지</span></label>
+  <hr><b>연결 추가 또는 갱신</b>
+  <label for="hub-preset">서비스</label><select id="hub-preset" class="text_pole"><option value="sakura">Sakura NAI · 사이트 키</option><option value="sharednai">SharedNAI · 계정 로그인</option><option value="custom">다른 NovelAI 호환 서버 · API 키</option></select>
+  <label for="hub-url">API 서버 주소</label><input id="hub-url" type="url" class="text_pole" spellcheck="false">
+  <div id="hub-custom" hidden><label for="hub-label">연결 이름</label><input id="hub-label" class="text_pole" placeholder="내 이미지 서버"></div>
+  <div id="hub-login" class="skb-fields" hidden><label>아이디<input id="hub-username" class="text_pole" autocomplete="off"></label><label>비밀번호<input id="hub-password" type="password" class="text_pole" autocomplete="off"></label></div>
+  <div id="hub-key-row"><label for="hub-key">사이트에서 받은 키</label><input id="hub-key" type="password" class="text_pole" autocomplete="off"></div>
+  <label class="checkbox_label"><input id="hub-remember" type="checkbox" checked><span>새 연결 저장 · 재시작 후 복원</span></label>
+  <div class="skb-actions"><button id="hub-connect" class="menu_button" type="button">추가하고 연결</button></div>
+  <p class="skb-note">키는 위 API 주소에 전달됩니다. 일반 웹페이지 주소가 아닌 제공자가 안내한 API 기본 주소를 입력하세요. 사용자 지정 연결은 NovelAI 호환 규격만 지원합니다.</p>
+  <p id="hub-status" role="status" aria-live="polite"></p>
+  <div class="skb-account-header"><b>잔액·할당량</b><button id="hub-refresh" class="menu_button" type="button">새로고침</button></div>
+  <dl id="hub-account"></dl>
+  <p class="skb-note">활성화하면 이전 SharedNAI·Sakura 개별 연결을 끕니다. 모델·프롬프트·크기는 Image Generation 또는 AutoPic에서 설정하세요. 저장한 키·토큰은 사용자 데이터 폴더에 보관됩니다.</p>
+ </div>
+</div>
