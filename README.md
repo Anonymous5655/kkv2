@@ -27,9 +27,7 @@ Node.js 20 이상이 필요합니다. 추가 npm 패키지는 필요하지 않�
 
 - 기존 SharedNAI·Sakura의 로그인 파일을 자동으로 가져오지 않습니다. 처음 한 번은 통합 화면에서 각 서비스를 연결하세요.
 - 통합 연결을 활성화하면 기존 SharedNAI·Sakura 화면 확장의 연결 체크를 끕니다.
-- 정상 생성 확인 후 기존 개별 화면 확장과 `plugins/sharednai-bridge`, `plugins/sakura-nai-bridge`는 필요 없으면 제거할 수 있습니다. 통합 서버 `plugins/nai-connection-hub`만 남기면 됩니다.
-- 기존 AutoPic 자체는 유지합니다. AutoPic의 다른 기능을 사용하는 서버 플러그인은 필요 여부에 따라 유지하세요.
-- 확장 이름의 `000`과 로딩 순서는 AutoPic 요청 변환에 사용하므로 변경하지 마세요.
+- 정상 생성 확인 후 기존 개별 화면 확장과 `plugins/sharednai-bridge`, `plugins/sakura-nai-bridge`는 필요 없으면 제거할 수 있습니다. 통합 서버 `plugins/nai-connection-hub`만 남기면 됩니다..
 
 ## 연결을 추가하고 전환하기
 
@@ -47,12 +45,10 @@ Node.js 20 이상이 필요합니다. 추가 npm 패키지는 필요하지 않�
 ## 이미지 생성 설정
 
 - 기본 Image Generation: 소스를 **NovelAI**로 선택합니다.
-- AutoPic: **ST Image Generation · 기존 방식**, **AutoPic · V4.5 Full**, **AutoPic · V5 Full**을 지원합니다.
-- 기존 방식에서 AutoPic 캐릭터/참조 기능을 쓰려면 AutoPic의 서버 플러그인 기능을 켭니다. 실제 이미지 요청은 통합 서버가 처리합니다.
 - 모델·프롬프트·크기·캐릭터 설정은 기존 이미지 생성 확장에서 선택합니다. 통합 연결 자체에는 이미지 생성 버튼이 없습니다.
 - 공식 NovelAI 키 입력란에 사이트 키를 넣지 않아도 됩니다.
 
-다른 확장은 ST의 동일한 NovelAI/AutoPic 이미지 요청 경로를 fetch로 사용할 때 연결됩니다. 직접 외부 서버를 호출하는 확장이나 독자적인 요청 규격은 별도 연동이 필요할 수 있습니다.
+직접 외부 서버를 호출하는 확장이나 독자적인 요청 규격은 별도 연동이 필요할 수 있습니다.
 
 ## 사용자 지정 서버의 호환 조건
 
